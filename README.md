@@ -1,4 +1,4 @@
-# Can I Vibecode It?
+# Bot or Nah
 
 **[canivibecodeit.com](https://canivibecodeit.com)** — find out which subscriptions are one
 prompt away from free.

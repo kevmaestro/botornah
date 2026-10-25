@@ -35,6 +35,6 @@ name = "EMAIL"
 # on the verdict pages, so published results always name the real model.
 [vars]
 LOCAL_AI = "1"
-LOCAL_AI_KINDS = "reverse,kit,test"
+LOCAL_AI_KINDS = "reverse,kit"
 LOCAL_AI_LABEL = "Qwen 3.5 (Bot or Nah's own AI server)"
 LOCAL_AI_JUDGE_LABEL = "Qwen 3.5"
