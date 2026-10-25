@@ -1,0 +1,39 @@
+# Local test config: same as wrangler.toml but with a stand-in for Workers AI.
+# botornah.com Worker. Mirrors the live dashboard settings read on 2026-10-25
+# (version 3f21e1c6). Routes and custom domains (botornah.com, www.botornah.com)
+# are managed in the dashboard and are intentionally not listed here, so a
+# deploy never touches them.
+name = "botornah"
+main = "dev/entry.js"
+compatibility_date = "2026-09-27"
+workers_dev = true
+preview_urls = true
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+[observability]
+enabled = true
+
+
+[[kv_namespaces]]
+binding = "DB"
+id = "d32098fd8ca74ce2adaf02170f9eb49f"
+
+[[d1_databases]]
+binding = "DB1"
+database_name = "botornah"
+database_id = "b684c708-b7ff-4a26-9588-3532ca6a5c05"
+
+[[send_email]]
+name = "EMAIL"
+
+# Bot or Nah's own AI server (outbound relay, see src/local-ai.js).
+# The relay is active only when the AI_RELAY_KEY secret exists.
+# Tool test runs that the server answers are labeled with the labels below
+# on the verdict pages, so published results always name the real model.
+[vars]
+LOCAL_AI = "1"
+LOCAL_AI_KINDS = "reverse,kit,test"
+LOCAL_AI_LABEL = "Qwen 3.5 (Bot or Nah's own AI server)"
+LOCAL_AI_JUDGE_LABEL = "Qwen 3.5"
