@@ -38,3 +38,8 @@ LOCAL_AI = "1"
 LOCAL_AI_KINDS = "reverse,kit"
 LOCAL_AI_LABEL = "Qwen 3.5 (Bot or Nah's own AI server)"
 LOCAL_AI_JUDGE_LABEL = "Qwen 3.5"
+# Sponsor page offer settings. Leave unset until Kevin picks the numbers:
+# SPONSOR_CLICK_FLOOR unset = the clicks guarantee is not shown.
+# NEWSLETTER_MIN_SUBS unset = the Newsletter sponsor card stays hidden.
+# SPONSOR_CLICK_FLOOR = ""
+# NEWSLETTER_MIN_SUBS = ""
